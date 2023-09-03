@@ -31,33 +31,33 @@ class _BodyState extends State<Body> {
   final productCategories = <Map>[
     <String, dynamic>{
       ICON_KEY: "assets/icons/Electronics.svg",
-      TITLE_KEY: "Electronics",
-      PRODUCT_TYPE_KEY: ProductType.Electronics,
+      TITLE_KEY: "Burger", 
+      PRODUCT_TYPE_KEY: ProductType.Burger,
     },
     <String, dynamic>{
       ICON_KEY: "assets/icons/Books.svg",
-      TITLE_KEY: "Books",
-      PRODUCT_TYPE_KEY: ProductType.Books,
+      TITLE_KEY: "Pizza",
+      PRODUCT_TYPE_KEY: ProductType.Pizza,
     },
     <String, dynamic>{
       ICON_KEY: "assets/icons/Fashion.svg",
-      TITLE_KEY: "Fashion",
-      PRODUCT_TYPE_KEY: ProductType.Fashion,
+      TITLE_KEY: "Biryani",
+      PRODUCT_TYPE_KEY: ProductType.Biryani,
     },
     <String, dynamic>{
       ICON_KEY: "assets/icons/Groceries.svg",
-      TITLE_KEY: "Groceries",
-      PRODUCT_TYPE_KEY: ProductType.Groceries,
+      TITLE_KEY: "Kabab",
+      PRODUCT_TYPE_KEY: ProductType.Kabab,
     },
     <String, dynamic>{
       ICON_KEY: "assets/icons/Art.svg",
-      TITLE_KEY: "Art",
-      PRODUCT_TYPE_KEY: ProductType.Art,
+      TITLE_KEY: "Shami",
+      PRODUCT_TYPE_KEY: ProductType.Shami,
     },
     <String, dynamic>{
       ICON_KEY: "assets/icons/Others.svg",
-      TITLE_KEY: "Others",
-      PRODUCT_TYPE_KEY: ProductType.Others,
+      TITLE_KEY: "Zinger",
+      PRODUCT_TYPE_KEY: ProductType.Zinger,
     },
   ];
 
@@ -128,28 +128,28 @@ class _BodyState extends State<Body> {
                     }
                   },
                   onCartButtonPressed: () async {
-                    bool allowed =
-                        AuthentificationService().currentUserVerified;
-                    if (!allowed) {
-                      final reverify = await showConfirmationDialog(context,
-                          "You haven't verified your email address. This action is only allowed for verified users.",
-                          positiveResponse: "Resend verification email",
-                          negativeResponse: "Go back");
-                      if (reverify) {
-                        final future = AuthentificationService()
-                            .sendVerificationEmailToCurrentUser();
-                        await showDialog(
-                          context: context,
-                          builder: (context) {
-                            return AsyncProgressDialog(
-                              future,
-                              message: Text("Resending verification email"),
-                            );
-                          },
-                        );
-                      }
-                      return;
-                    }
+                    // bool allowed =
+                    //     AuthentificationService().currentUserVerified;
+                    // if (!allowed) {
+                    //   final reverify = await showConfirmationDialog(context,
+                    //       "You haven't verified your email address. This action is only allowed for verified users.",
+                    //       positiveResponse: "Resend verification email",
+                    //       negativeResponse: "Go back");
+                    //   if (reverify) {
+                    //     final future = AuthentificationService()
+                    //         .sendVerificationEmailToCurrentUser();
+                    //     await showDialog(
+                    //       context: context,
+                    //       builder: (context) {
+                    //         return AsyncProgressDialog(
+                    //           future,
+                    //           message: Text("Resending verification email"),
+                    //         );
+                    //       },
+                    //     );
+                    //   }
+                    //   return;
+                    // }
                     await Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -172,7 +172,7 @@ class _BodyState extends State<Body> {
                           productCategories.length,
                           (index) {
                             return ProductTypeBox(
-                              icon: productCategories[index][ICON_KEY],
+                              // icon: productCategories[index][ICON_KEY],
                               title: productCategories[index][TITLE_KEY],
                               onPress: () {
                                 Navigator.push(

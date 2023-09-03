@@ -3,7 +3,7 @@ import 'size_config.dart';
 
 const String appName = "Bazaar sy";
 
-const kPrimaryColor = Color.fromARGB(255, 65, 151, 7);
+const kPrimaryColor = Color.fromARGB(255, 233, 163, 0);
 const kPrimaryLightColor = Color.fromARGB(0, 185, 248, 191);
 const kPrimaryGradientColor = LinearGradient(
   begin: Alignment.topLeft,

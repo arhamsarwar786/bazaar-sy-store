@@ -1,77 +1,34 @@
 {
   "project_info": {
-    "project_number": "663977562435",
-    "project_id": "bazaar-sy",
-    "storage_bucket": "bazaar-sy.appspot.com"
+    "project_number": "673563485562",
+    "project_id": "spicy-bite-d789c",
+    "storage_bucket": "spicy-bite-d789c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:663977562435:android:ef68c14603c3c3b7705ff6",
+        "mobilesdk_app_id": "1:673563485562:android:84edee087ad1014742e2c3",
         "android_client_info": {
           "package_name": "com.arham.ecommerce_muzamil"
         }
       },
       "oauth_client": [
         {
-          "client_id": "663977562435-qukqqtlbg2n0jh8m5kf5ihsense81dt0.apps.googleusercontent.com",
+          "client_id": "673563485562-mjiqk74ecogku6u113sh628fid86gl1u.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCp0BS_BKh4f-dE039BVRaA1UExgw-D8TA"
+          "current_key": "AIzaSyBXlwgfZ0ou7LKf7GdjQKxgiT0GhUL7oaI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "663977562435-qukqqtlbg2n0jh8m5kf5ihsense81dt0.apps.googleusercontent.com",
+              "client_id": "673563485562-mjiqk74ecogku6u113sh628fid86gl1u.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "663977562435-0kv3hnh6kgsbaiq9b9qtvtse3kcmompe.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.ecommerceMuzamil"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:663977562435:android:e308c44de133650b705ff6",
-        "android_client_info": {
-          "package_name": "com.arham.ecommerce_muzamil"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "663977562435-qukqqtlbg2n0jh8m5kf5ihsense81dt0.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCp0BS_BKh4f-dE039BVRaA1UExgw-D8TA"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "663977562435-qukqqtlbg2n0jh8m5kf5ihsense81dt0.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "663977562435-0kv3hnh6kgsbaiq9b9qtvtse3kcmompe.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.ecommerceMuzamil"
-              }
             }
           ]
         }

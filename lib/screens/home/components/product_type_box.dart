@@ -41,10 +41,7 @@ class ProductTypeBox extends StatelessWidget {
                   padding: const EdgeInsets.all(6.0),
                   child: AspectRatio(
                     aspectRatio: 1,
-                    child: SvgPicture.asset(
-                      icon,
-                      color: kPrimaryColor,
-                    ),
+                    child: Icon(Icons.food_bank, color: Colors.amber,),
                   ),
                 ),
               ),

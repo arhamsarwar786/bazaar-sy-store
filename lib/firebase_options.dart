@@ -17,15 +17,24 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -43,41 +52,11 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyD_ra1vxYg4xfFpWLalYe6-tpSELQDFl9k',
-    appId: '1:663977562435:web:cc1635739685ae48705ff6',
-    messagingSenderId: '663977562435',
-    projectId: 'bazaar-sy',
-    authDomain: 'bazaar-sy.firebaseapp.com',
-    storageBucket: 'bazaar-sy.appspot.com',
-    measurementId: 'G-HBR4QTVH83',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCp0BS_BKh4f-dE039BVRaA1UExgw-D8TA',
-    appId: '1:663977562435:android:ef68c14603c3c3b7705ff6',
-    messagingSenderId: '663977562435',
-    projectId: 'bazaar-sy',
-    storageBucket: 'bazaar-sy.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDEJGLrfdyow5MU5JgtgbQ61xKBQk_axQQ',
-    appId: '1:663977562435:ios:da6711827f9a0b4d705ff6',
-    messagingSenderId: '663977562435',
-    projectId: 'bazaar-sy',
-    storageBucket: 'bazaar-sy.appspot.com',
-    iosClientId: '663977562435-0kv3hnh6kgsbaiq9b9qtvtse3kcmompe.apps.googleusercontent.com',
-    iosBundleId: 'com.example.ecommerceMuzamil',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDEJGLrfdyow5MU5JgtgbQ61xKBQk_axQQ',
-    appId: '1:663977562435:ios:da6711827f9a0b4d705ff6',
-    messagingSenderId: '663977562435',
-    projectId: 'bazaar-sy',
-    storageBucket: 'bazaar-sy.appspot.com',
-    iosClientId: '663977562435-0kv3hnh6kgsbaiq9b9qtvtse3kcmompe.apps.googleusercontent.com',
-    iosBundleId: 'com.example.ecommerceMuzamil',
+    apiKey: 'AIzaSyBXlwgfZ0ou7LKf7GdjQKxgiT0GhUL7oaI',
+    appId: '1:673563485562:android:84edee087ad1014742e2c3',
+    messagingSenderId: '673563485562',
+    projectId: 'spicy-bite-d789c',
+    storageBucket: 'spicy-bite-d789c.appspot.com',
   );
 }

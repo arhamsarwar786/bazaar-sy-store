@@ -1,5 +1,7 @@
 import 'dart:developer';
+
 import 'package:url_launcher/url_launcher.dart';
+import 'package:whatsapp_unilink/whatsapp_unilink.dart';
 
 import '/services/database/user_database_helper.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +9,7 @@ import 'package:flutter/material.dart';
 import '../../../size_config.dart';
 
 
- var mobileNum = '+923109347076';
+ var mobileNum = '+923053332035';
 class CheckoutCard extends StatelessWidget {
   
   final VoidCallback onCheckoutPressed;
@@ -90,17 +92,11 @@ class CheckoutCard extends StatelessWidget {
       ),
     );
   }
-launchWhatsapp(context,number, message) async {
-    var whatsapp = number;
-    var whatsappAndroid ="whatsapp://send?phone=$whatsapp&text=$message";
-    if (await canLaunch(whatsappAndroid)) {
-        await launch(whatsappAndroid);
-    } else {
-        ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text("WhatsApp is not installed on the device"),
-        ),
-      );
-    }
+launchWhatsapp(context,number, message) async {        
+     final link = WhatsAppUnilink(
+    phoneNumber: number,
+    text: message,
+  );
+  await launch(link.toString());
 }
 }

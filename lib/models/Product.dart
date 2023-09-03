@@ -2,12 +2,12 @@ import '/models/Model.dart';
 import 'package:enum_to_string/enum_to_string.dart';
 
 enum ProductType {
-  Electronics,
-  Books,
-  Fashion,
-  Groceries,
-  Art,
-  Others,
+  Burger,
+  Pizza,
+  Biryani,
+  Kabab,
+  Shami,
+  Zinger,
 }
 
 class Product extends Model {

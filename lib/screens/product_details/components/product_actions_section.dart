@@ -57,27 +57,27 @@ class ProductActionsSection extends StatelessWidget {
       builder: (context, productDetails, child) {
         return InkWell(
           onTap: () async {
-            bool allowed = AuthentificationService().currentUserVerified;
-            if (!allowed) {
-              final reverify = await showConfirmationDialog(context,
-                  "You haven't verified your email address. This action is only allowed for verified users.",
-                  positiveResponse: "Resend verification email",
-                  negativeResponse: "Go back");
-              if (reverify) {
-                final future = AuthentificationService()
-                    .sendVerificationEmailToCurrentUser();
-                await showDialog(
-                  context: context,
-                  builder: (context) {
-                    return AsyncProgressDialog(
-                      future,
-                      message: Text("Resending verification email"),
-                    );
-                  },
-                );
-              }
-              return;
-            }
+            // bool allowed = AuthentificationService().currentUserVerified;
+            // if (!allowed) {
+            //   final reverify = await showConfirmationDialog(context,
+            //       "You haven't verified your email address. This action is only allowed for verified users.",
+            //       positiveResponse: "Resend verification email",
+            //       negativeResponse: "Go back");
+            //   if (reverify) {
+            //     final future = AuthentificationService()
+            //         .sendVerificationEmailToCurrentUser();
+            //     await showDialog(
+            //       context: context,
+            //       builder: (context) {
+            //         return AsyncProgressDialog(
+            //           future,
+            //           message: Text("Resending verification email"),
+            //         );
+            //       },
+            //     );
+            //   }
+            //   return;
+            // }
             bool success = false;
             final future = UserDatabaseHelper()
                 .switchProductFavouriteStatus(

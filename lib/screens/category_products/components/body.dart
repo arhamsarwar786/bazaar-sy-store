@@ -175,14 +175,14 @@ class _BodyState extends State<Body> {
       children: [
         Container(
           decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(bannerFromProductType()),
-              fit: BoxFit.fill,
-              colorFilter: ColorFilter.mode(
-                kPrimaryColor,
-                BlendMode.hue,
-              ),
-            ),
+            // image: DecorationImage(
+            //   // image: AssetImage(bannerFromProductType()),
+            //   fit: BoxFit.fill,
+            //   colorFilter: ColorFilter.mode(
+            //     kPrimaryColor,
+            //     BlendMode.hue,
+            //   ),
+            // ),
             borderRadius: BorderRadius.circular(30),
           ),
         ),
@@ -251,22 +251,24 @@ class _BodyState extends State<Body> {
     );
   }
 
-  String bannerFromProductType() {
-    switch (widget.productType) {
-      case ProductType.Electronics:
-        return "assets/images/electronics_banner.jpg";
-      case ProductType.Books:
-        return "assets/images/books_banner.jpg";
-      case ProductType.Fashion:
-        return "assets/images/fashions_banner.jpg";
-      case ProductType.Groceries:
-        return "assets/images/groceries_banner.jpg";
-      case ProductType.Art:
-        return "assets/images/arts_banner.jpg";
-      case ProductType.Others:
-        return "assets/images/others_banner.jpg";
-      default:
-        return "assets/images/others_banner.jpg";
-    }
-  }
+  // String bannerFromProductType() {
+  //   switch (widget.productType) {
+  //     case ProductType.Electronics:
+  //       return "assets/images/electronics_banner.jpg";
+  //     case ProductType.Books:
+  //       return "assets/images/books_banner.jpg";
+  //     case ProductType.Fashion:
+  //       return "assets/images/fashions_banner.jpg";
+  //     case ProductType.Groceries:
+  //       return "assets/images/groceries_banner.jpg";
+  //     case ProductType.Art:
+  //       return "assets/images/arts_banner.jpg";
+  //     case ProductType.Others:
+  //       return "assets/images/others_banner.jpg";
+  //     default:
+  //       return "assets/images/others_banner.jpg";
+  //   }
+  // }
+
 }
+
